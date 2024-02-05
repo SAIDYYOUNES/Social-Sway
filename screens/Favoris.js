@@ -12,10 +12,14 @@ export default function Favoris() {
     >
       <View>
         {favorited.length > 0 ? (
-          <ScrollView>
+          <ScrollView style={{
+            
+          }}>
             {favorited.map((item) => (
               item.photos.map((photo) => (
-                <PostCard key={photo.id} post={photo} />
+                <View key={photo.id} style={{marginTop:20}} >
+                <PostCard    post={photo} />
+                </View>
               ))
             ))}
           </ScrollView>

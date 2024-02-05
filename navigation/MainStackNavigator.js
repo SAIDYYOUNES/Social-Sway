@@ -23,6 +23,7 @@ const MainStackNavigator = () => {
               style={{ marginRight: 10 }}
               onPress={() => {
                 dispatch(toggleFavorite(route.params.user))
+                favorited.includes(route.params.user) ? Alert.alert('Photos supprimées', 'Elles ne sont plus disponible dans votre selection ') :
                 Alert.alert('Photos enregistrées', 'Elles sont disponible dans votre selection ')
               }}
             >
